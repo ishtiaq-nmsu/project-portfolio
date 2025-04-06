@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Gallery - Portfolio{% endblock %}
+
+{% block content %}
+<div class="gallery-section mt-5">
+    <div class="container">
+        <!-- Gallery Header -->
+        <div class="text-center mb-4">
+            <h1>Gallery</h1>
+            <p>Here are some memorable moments from my professional and personal life.</p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row">
+            <!-- Image 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'images/gallery-data-analyst.jpg' %}" class="card-img-top" alt="Receiving Award">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Recieving Data Analyst Certificate from CEO of Robi Axiata Bangladesh</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'images/presentation.jpg' %}" class="card-img-top" alt="Giving Presentation">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Giving Presentation</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <img src="{% static 'images/conference.jpg' %}" class="card-img-top" alt="Attending Conference">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Attending Conference</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+</div>
+{% endblock %}

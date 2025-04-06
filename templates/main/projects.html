@@ -1,0 +1,70 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Projects - Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Project 1 -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-5">
+            <img src="{% static 'images/project-1.jpg' %}" class="img-fluid rounded shadow mb-3" alt="Project 1 Image 1">
+        </div>
+        <div class="col-md-7">
+            <h3 class="project-title text-primary">Detection of Cattle Behavior Utilizing YOLOv8 and OpenCV</h3>
+            <p class="project-description">
+                In this project, I developed a dataset and implemented a deep learning model for detecting cattle behaviors in videos. 
+                A comprehensive dataset of 92,592 images representing four cattle behaviors (standing, walking, feeding, and resting) was compiled, 
+                along with 104 selected videos for annotation. The data was processed using the CVAT annotation tool, which was utilized to annotate image frames, 
+                ensuring accurate labeling of each behavior. A YOLOv8 deep learning model was then trained to classify these behaviors, with a particular focus on 
+                improving the detection of the "walking" behavior. To achieve this, I integrated an OpenCV background subtraction model to develop a mechanism called YOLO-BS, 
+                which significantly boosted the model's performance in detecting movements accurately. In addition to behavior classification, 
+                OpenCV was used to visualize the results, displaying bounding boxes, behavior labels, and the count and total duration of each behavior in the output video.
+            </p>
+            <p>
+                <strong>Technologies Used:</strong> Python, Deep learning, YOLOv8, CVAT, OpenCV, TensorFlow.
+            </p>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-5">
+            <img src="{% static 'images/project-2.jpg' %}" class="img-fluid rounded shadow mb-3" alt="Project 1 Image 1">
+        </div>
+        <div class="col-md-7">
+            <h3 class="project-title text-primary">ETL Pipeline for Real-Time Stock Data Analysis and Storage</h3>
+            <p class="project-description">
+                This project involves the creation of an ETL (Extract, Transform, Load) pipeline to efficiently handle and analyze real-time stock data. 
+                Using an API, stock data is extracted in real time, with key financial indicators such as the Simple Moving Average (SMA) and Range Ratio 
+                calculated during the transformation phase. The processed data is then loaded into an SQLite database for persistent storage. 
+                To ensure fast processing, multi-threading techniques were employed to handle multiple stock data requests simultaneously, 
+                reducing processing time significantly. Additionally, the results of the transformations are exported to a text file, providing a human-readable format for easy analysis. 
+            </p>
+            <p>
+                <strong>Technologies Used:</strong> Python, SQL, SQLite.
+            </p>
+        </div>
+    </div>
+    <!-- Project 3 -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-5">
+            <img src="{% static 'images/project-3.jpg' %}" alt="Project 3" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-7">
+            <h3 class="project-title text-primary">Telecom Customer Churn Prediction with Machine Learning</h3>
+            <p class="project-description">
+                In this project, I explored the problem of customer churn prediction in the telecom industry using machine learning techniques. 
+                Using a publicly available dataset from Kaggle, I performed extensive Exploratory Data Analysis (EDA) to uncover patterns, correlations, 
+                and insights that could help predict customer churn. The project involved Principal Component Analysis (PCA) for dimensionality reduction to 
+                improve model performance and training efficiency. I compared the performance of several machine learning models, including Logistic Regression, 
+                Decision Tree, K-Nearest Neighbors (KNN), and AdaBoost. After fine-tuning and optimizing these models, I achieved more than 90% accuracy, 
+                precision, and recall, demonstrating the models' ability to effectively predict which customers are likely to churn.            
+            </p>
+            <p>
+                <strong>Technologies Used:</strong> Python, Machine learning, KNN, Decision Tree, Logistic Regression, AdaBoost, PCA, EDA, Pandas, Matplotlib, Seaborn.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
